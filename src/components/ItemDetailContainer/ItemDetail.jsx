@@ -7,13 +7,13 @@ import {useCartContext} from '../../Context/CartContext'
 export const ItemDetail = ({title, despcription, price, pictureUrl}) => {
  const[goToCart, setGoToCart] = useState(false);
 
- const { addProdut } = useCartContext();
+ const { addProduct } = useCartContext();
  
   const onAdd = (count)=>{
     setGoToCart(true);
     // alert(`Agregaste ${count} items al carrito`)
 
-    addProdut(title, despcription,price,pictureUrl, count);
+    addProduct(title, despcription,price,pictureUrl, count);
   }
   return (
     <div id='item-detail'>
@@ -26,7 +26,7 @@ export const ItemDetail = ({title, despcription, price, pictureUrl}) => {
             <h3>${price}</h3>
             {
               goToCart
-              ? <Link to='/cart'>Terminar Compra</Link>
+              ? <Link to='/Cart'>Terminar Compra</Link>
               :
               <ItemCount  stock={5} initial={1} onAdd={onAdd} />
             }

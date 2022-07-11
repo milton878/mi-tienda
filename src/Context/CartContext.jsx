@@ -1,22 +1,26 @@
-import React, { Children, useContext } from "react";
-import { useState } from "react";
-import {Cart} from' ./components/Cart/Cart';
+import React from 'react';
+import { useState } from 'react';
+import { useContext } from 'react';
 
- const CartContext = React.createContext([]);
 
-export const useCartContext = () => useContext(CartContext);
 
-const CartProvider = () =>{
+
+  const CartContext = React.createContext([]);
+
+ export  const useCartContext = () => useContext(CartContext);
+
+const CartProvider = ({Children}) =>{
     //logica para el carrito:
-    //Agregar al carrito
+    
     const[cart, setCart] = useState([]);
+    //Agregar al carrito
     const addProduct = (item, count)=>{
         if(isInCart(item.id)){
             setCart(cart.map(product =>{
                 return product.id === item.id ? {...product, count:product.count + count} : product
             }));
         }else{
-            setCart([...Cart,{...item, count }])
+            setCart([...cart, { ...item, count }])
         }
     }
 
