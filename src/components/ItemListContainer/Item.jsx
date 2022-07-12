@@ -1,11 +1,11 @@
 import React from 'react'
-import { useContext } from 'react'
-import { CartContext }  from '../../Context/CartContext'
+import { CartContext } from '../../Context/CartContext'
+import { useCartContext }  from '../../Context/CartContext'
 import { Card, Button } from 'react-bootstrap'
 import { Link} from 'react-router-dom'
 
 export const Item = ({id, title,  description, price, pictureUrl}) => {
-  const nombre = useContext(CartContext);
+  const nombre = useCartContext(CartContext);
   console.log('Item: ', nombre);
   return (
         <Card style={{ width: '18rem' }} id="item">
@@ -23,3 +23,4 @@ export const Item = ({id, title,  description, price, pictureUrl}) => {
         </Card>
   )
 }
+

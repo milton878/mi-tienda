@@ -15,9 +15,10 @@ function App() {
   return (
     <>
     {
+
         <BrowserRouter> 
-        
-          <CartProvider>
+          
+        <CartProvider>
             <NavBar />
             <Routes>
               <Route path='/' element={<ItemListContainer />}/>
@@ -27,19 +28,17 @@ function App() {
         
             </Routes>
           </CartProvider>
-      
         </BrowserRouter>
+          
+
       /*
-      
             <ItemCount  stock={5} initial={1} onAdd={onAdd} />
-      
-      
-      
       */
     }
     
       </>
   );
+  
 }
 
 export default App;

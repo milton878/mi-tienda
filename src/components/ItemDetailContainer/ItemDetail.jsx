@@ -37,3 +37,4 @@ export const ItemDetail = ({title, despcription, price, pictureUrl}) => {
     </div>
   )
 }
+export default ItemDetail

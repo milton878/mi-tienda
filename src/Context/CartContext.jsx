@@ -1,15 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
-import { useContext } from 'react';
+// import { useCartContext } from 'react';
 
 
 
 
-  const CartContext = React.createContext([]);
+  export const CartContext = React.createContext([]);
 
- export  const useCartContext = () => useContext(CartContext);
+   //  const useCartContext = () => CartContext(Context);
 
-const CartProvider = ({Children}) =>{
+const CartProvider = ({children}) =>{
     //logica para el carrito:
     
     const[cart, setCart] = useState([]);
@@ -44,7 +44,7 @@ const CartProvider = ({Children}) =>{
             removeProduct,
             addProduct
         }}>
-            {Children}
+            {children}
         </CartContext.Provider>
     )
 }
