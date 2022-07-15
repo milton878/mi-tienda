@@ -15,10 +15,11 @@ function App() {
   return (
     <>
     {
-
-        <BrowserRouter> 
-          
+       
+       <BrowserRouter> 
         <CartProvider>
+          
+       
             <NavBar />
             <Routes>
               <Route path='/' element={<ItemListContainer />}/>
@@ -27,10 +28,10 @@ function App() {
               <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
         
             </Routes>
-          </CartProvider>
+           </CartProvider>
+          
         </BrowserRouter>
           
-
       /*
             <ItemCount  stock={5} initial={1} onAdd={onAdd} />
       */
