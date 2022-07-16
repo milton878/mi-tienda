@@ -18,8 +18,6 @@ function App() {
        
        <BrowserRouter> 
         <CartProvider>
-          
-       
             <NavBar />
             <Routes>
               <Route path='/' element={<ItemListContainer />}/>
@@ -28,8 +26,7 @@ function App() {
               <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
         
             </Routes>
-           </CartProvider>
-          
+           </CartProvider> 
         </BrowserRouter>
           
       /*

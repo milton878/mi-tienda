@@ -10,8 +10,11 @@ export const CartWidget = () => {
 
   return (
     <div id="cart-widget">
-    <AiOutlineShoppingCart className='icon'/>
-    <span>{totalProducts () || ''}</span>
+
+    
+    <AiOutlineShoppingCart className='icon' />
+    <span className='cart-num'>{totalProducts () || ''}</span>
+
     
     </div>
   )
