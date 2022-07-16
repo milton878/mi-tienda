@@ -17,7 +17,7 @@ export const ItemDetailContainer = () => {
         getArray(array)
               .then(res=>{
               const item = res.find((item)=> item.id === Number (itemId))
-               setProduct(item)
+               setProduct(item )
        
                })
               .catch(err=>console.log(err))

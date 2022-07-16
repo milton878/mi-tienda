@@ -1,6 +1,6 @@
 .itemCart{
     display: flex;
-    border-bottom:1px solid gray;
+    border-bottom:1px solid grey;
     max-width: 500px;
     margin: 1rem auto;
 }

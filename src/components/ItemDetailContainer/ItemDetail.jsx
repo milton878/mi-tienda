@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../../Context/CartContext'
 
-export const ItemDetail = ({title, despcription, price, pictureUrl}) => {
+export const ItemDetail = ({id,title, despcription, price, pictureUrl}) => {
  const[goToCart, setGoToCart] = useState(false);
 
  const { addProduct } = useCartContext();
@@ -12,7 +12,7 @@ export const ItemDetail = ({title, despcription, price, pictureUrl}) => {
   const onAdd = (count)=>{
     setGoToCart(true);
     // alert(`Agregaste ${count} items al carrito`)
-    const item ={title, despcription,price,pictureUrl}
+    const item ={id, title, despcription,price,pictureUrl}
     addProduct(item, count);
   }
   return (
